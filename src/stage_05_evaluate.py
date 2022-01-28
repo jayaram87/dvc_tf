@@ -1,11 +1,11 @@
 import argparse
 import os
-import joblib
 import logging
 from src.utils.common import read_yaml_file, save_json, get_timestamp
 import numpy as np
 import sklearn.metrics as metrics
 import math
+import tensorflow as tf
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),
@@ -21,9 +21,9 @@ def evaluate(config_path):
     model_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["TRAINED_MODEL_DIR"])
     model_path = os.path.join(model_dir_path, 'trained_model.h5')
 
-    model = joblib.load(model_path)
-    x_test = np.load(os.path.join(artifacts['data'], 'X_test.npy')) / 255
-    y_test = np.load(os.path.join(artifacts['data'], 'y_test.npy'))
+    model = tf.keras.models.load_model(model_path)
+    x_test = np.load(os.path.join(artifacts['DATA_DIR'], 'X_test.npy')) / 255
+    y_test = np.load(os.path.join(artifacts['DATA_DIR'], 'y_test.npy'))
 
     prediction_by_class = model.predict_proba(x_test)
     predictions = prediction_by_class[:, 1]

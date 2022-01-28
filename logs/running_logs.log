@@ -141,3 +141,45 @@ Traceback (most recent call last):
   File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 579, in load
     with open(filename, 'rb') as f:
 FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\trained_model\\model_at_Sat_Jan_29_03.01.57_2022_.h5'
+[2022-01-29 03:04:14,208: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:04:14,211: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:04:14,211: ERROR: stage_05_evaluate]: 72
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 24, in evaluate
+    model = joblib.load(model_path)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 587, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 506, in _unpickle
+    obj = unpickler.load()
+  File "D:\Anaconda3\envs\dvc_tf1\lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+KeyError: 72
+[2022-01-29 03:06:18,764: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:06:18,766: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:06:18,767: ERROR: stage_05_evaluate]: 72
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 24, in evaluate
+    model = joblib.load(model_path)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 587, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 506, in _unpickle
+    obj = unpickler.load()
+  File "D:\Anaconda3\envs\dvc_tf1\lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+KeyError: 72
+[2022-01-29 03:09:11,157: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:09:11,160: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:09:11,751: ERROR: stage_05_evaluate]: 'data'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 25, in evaluate
+    x_test = np.load(os.path.join(artifacts['data'], 'X_test.npy')) / 255
+KeyError: 'data'
