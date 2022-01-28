@@ -1,0 +1,45 @@
+[2022-01-28 21:13:07,387: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 21:13:07,387: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 21:13:07,387: ERROR: stage_01_get_data]: get_data() got an unexpected keyword argument 'config_path'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+TypeError: get_data() got an unexpected keyword argument 'config_path'
+[2022-01-28 21:13:49,993: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 21:13:49,994: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 21:13:49,994: ERROR: stage_01_get_data]: get_data() got an unexpected keyword argument 'config_path'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+TypeError: get_data() got an unexpected keyword argument 'config_path'
+[2022-01-28 21:14:44,327: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 21:14:44,327: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 21:14:44,628: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-28 21:14:44,628: ERROR: stage_01_get_data]: 'numpy.ndarray' object has no attribute 'element_spec'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_01_get_data.py", line 24, in get_data
+    tf.data.experimental.save(X_train_full, os.path.join(os.getcwd(), 'data', 'X_train_full'))
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\tensorflow\python\data\experimental\ops\io.py", line 136, in save
+    dataset, shard_func, use_shard_func, path = _set_save_dataset_attributes(
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\tensorflow\python\data\experimental\ops\io.py", line 181, in _set_save_dataset_attributes
+    input_structure=dataset.element_spec,
+AttributeError: 'numpy.ndarray' object has no attribute 'element_spec'
+[2022-01-28 21:20:37,378: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 21:20:37,378: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 21:20:37,590: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-28 21:20:38,003: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-28 21:20:38,007: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+
+[2022-01-28 21:21:06,575: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 21:21:06,575: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 21:21:06,798: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-28 21:21:07,183: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-28 21:21:07,187: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+

@@ -1,0 +1,6 @@
+dvc
+tqdm
+tensorflow
+joblib
+scipy
+-e .
