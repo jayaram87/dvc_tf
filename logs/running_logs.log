@@ -360,3 +360,9 @@ Traceback (most recent call last):
   File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_classification.py", line 1365, in _check_set_wise_labels
     raise ValueError(
 ValueError: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+[2022-01-29 03:28:45,519: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:28:45,520: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:28:46,779: INFO: common]: json file saved at: scores.json
+[2022-01-29 03:28:46,784: INFO: stage_05_evaluate]: >>>>> stage evalation completed!<<<<<
+

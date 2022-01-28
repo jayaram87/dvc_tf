@@ -122,3 +122,28 @@ stages:
       md5: 5ffad6051502810f13b872d760a099fd.dir
       size: 1086400
       nfiles: 1
+  evaluate:
+    cmd: python src/stage_05_evaluate.py --config=configs/config.yaml
+    deps:
+    - path: artifacts/trained_model/trained_model.h5
+      md5: aeb230a03169af94f880f968aa4f8f81
+      size: 1086400
+    - path: configs/config.yaml
+      md5: e740d6c232652e743d4587f7a6124814
+      size: 338
+    - path: data/X_test.npy
+      md5: 7942b66f2197f22a8ed486c6bc205255
+      size: 7840128
+    - path: data/y_test.npy
+      md5: 3deb6f9de60479b947785b62051694b8
+      size: 10128
+    - path: src/stage_05_evaluate.py
+      md5: e809593bbb21f08d0d1b9823e097f8c2
+      size: 1726
+    - path: src/utils/common.py
+      md5: 2acd7fd10cb8669dfca427aa8fe9d1a1
+      size: 1492
+    outs:
+    - path: scores.json
+      md5: 8e3342f0fd10aa5ce5290fa3dab41931
+      size: 65
