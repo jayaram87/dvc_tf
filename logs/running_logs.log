@@ -40,3 +40,92 @@ _________________________________________________________________
 [2022-01-29 01:37:16,440: INFO: stage_04_train]: trained models is saved at: 
 artifacts\trained_model\model_at_Sat_Jan_29_01.37.16_2022_.h5
 [2022-01-29 01:37:16,467: INFO: stage_04_train]: >>>>> stage four completed! training completed <<<<<n
+[2022-01-29 02:54:46,453: INFO: stage_01_get_data]: 
+********************
+[2022-01-29 02:54:46,453: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-29 02:54:46,876: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-29 02:54:47,467: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-29 02:54:47,479: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+
+[2022-01-29 02:54:55,868: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-29 02:54:55,868: INFO: stage_03_prepare_callback]: >>>>> stage three started <<<<<
+[2022-01-29 02:54:55,870: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 02:54:55,870: INFO: common]: Directory is created at artifacts\tensorboard_log_dir
+[2022-01-29 02:54:55,871: INFO: common]: Directory is created at artifacts\checkpoints
+[2022-01-29 02:54:55,871: INFO: common]: Directory is created at artifacts\callbacks
+[2022-01-29 02:54:55,871: INFO: callbacks]: tensorboard callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
+[2022-01-29 02:54:55,873: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
+[2022-01-29 02:54:55,873: INFO: stage_03_prepare_callback]: >>>>> stage three completed! callbacks are prepared and saved as binary <<<<<n
+[2022-01-29 02:54:59,690: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 02:54:59,691: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 02:54:59,694: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 02:54:59,695: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 02:54:59,695: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 02:55:00,281: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 02:55:00,282: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 02:55:00,294: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 02:55:00,295: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+
+[2022-01-29 02:55:04,282: INFO: stage_04_train]: 
+********************
+[2022-01-29 02:55:04,282: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-29 02:55:04,284: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 02:55:04,285: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 02:55:04,285: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 02:55:04,609: INFO: model]: untrained models is read from: artifacts\model\model.h5
+[2022-01-29 02:55:04,610: INFO: model]: untrained full model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 02:55:04,611: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-29 02:55:04,773: INFO: data_management]: train and valid data created is created.
+[2022-01-29 03:00:40,654: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 03:00:40,675: INFO: stage_04_train]: trained models is saved at: 
+artifacts\trained_model\trained_model.h5
+[2022-01-29 03:00:40,727: INFO: stage_04_train]: >>>>> stage four completed! training completed <<<<<n
+[2022-01-29 03:01:40,321: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:01:40,323: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:01:40,323: ERROR: stage_05_evaluate]: [Errno 2] No such file or directory: 'artifacts\\trained_model\\model_at_Sat_Jan_29_03.01.40_2022_.h5'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 80, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 27, in evaluate
+    model = joblib.load(model_path)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\joblib\numpy_pickle.py", line 579, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\trained_model\\model_at_Sat_Jan_29_03.01.40_2022_.h5'
