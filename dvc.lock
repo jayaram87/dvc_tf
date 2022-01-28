@@ -22,3 +22,25 @@ stages:
     - path: data/y_train_full.npy
       md5: 40b22dba779a1dffd8089edc7991f797
       size: 60128
+  prepare_base_model:
+    cmd: python src/stage_02_prepare_base_model.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 2708073f10ab315102db6568ba7082c7
+      size: 295
+    - path: src/stage_02_prepare_base_model.py
+      md5: 38947e29af7416c8901136ed344d304c
+      size: 1678
+    - path: src/utils/common.py
+      md5: 8460252e8218203035d7b9fddf2c7169
+      size: 1307
+    - path: src/utils/model.py
+      md5: 98b50337d9fbeeb4c2f07318a8a80fef
+      size: 1792
+    params:
+      params.yaml:
+        LEARNING_RATE: 0.001
+    outs:
+    - path: artifacts/model/model.h5
+      md5: 4e56aae7b3ca495ad9ead5f7ce538729
+      size: 1084000

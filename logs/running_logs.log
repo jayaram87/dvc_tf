@@ -89,3 +89,59 @@ _________________________________________________________________
 [2022-01-29 00:02:47,610: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
 [2022-01-29 00:02:47,611: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
 
+[2022-01-29 00:04:11,574: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 00:04:11,574: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 00:04:11,576: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 00:04:11,576: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 00:04:11,576: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 00:04:12,161: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 00:04:12,162: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 00:04:12,175: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 00:04:12,176: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+
+[2022-01-29 00:05:09,277: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 00:05:09,277: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 00:05:09,279: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 00:05:09,279: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 00:05:09,280: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 00:05:09,864: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 00:05:09,865: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 00:05:09,879: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 00:05:09,879: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+

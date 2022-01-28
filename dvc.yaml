@@ -21,3 +21,16 @@ stages:
     - LEARNING_RATE
     outs:
     - artifacts/model/model.h5
+
+  prepare_callback:
+    cmd: python src/stage_03_prepare_callback.py --config=configs/config.yaml
+    deps:
+    - src/stage_03_prepare_callback.py
+    - src/utils/common.py
+    - src/utils/callbacks.py
+    - configs/config.yaml
+    - params.yaml
+    outs:
+    - artifacts/callbacks/checkpoint_cb.cb
+    - artifacts/callbacks/tensorboard_cb.cb
+
