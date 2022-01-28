@@ -32,7 +32,7 @@ def get_data(config_path) -> None:
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--config", "-c", default="configs/config.yaml")
+    args.add_argument("--config", "-c", default="configs/configs.yaml")
     parsed_args = args.parse_args()
 
     try:
