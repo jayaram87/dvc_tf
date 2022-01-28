@@ -34,3 +34,24 @@ stages:
     - artifacts/callbacks/checkpoint_cb.cb
     - artifacts/callbacks/tensorboard_cb.cb
 
+  train:
+    cmd: python src/stage_04_train.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - src/stage_04_train.py
+    - src/utils/common.py
+    - src/utils/model.py
+    - src/utils/callbacks.py
+    - src/utils/data_management.py
+    - configs/config.yaml
+    - artifacts/callbacks/checkpoint_cb.cb
+    - artifacts/callbacks/tensorboard_cb.cb
+    - artifacts/model/model.h5
+    - data/X_train_full.npy
+    - data/y_train_full.npy
+    params:
+    - BATCH_SIZE
+    - EPOCHS
+    outs:
+    - artifacts/trained_model
+    - artifacts/tensorboard_log_dir
+    - artifacts/checkpoints

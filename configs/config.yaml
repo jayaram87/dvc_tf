@@ -1,6 +1,6 @@
 artifacts:
   ARTIFACTS_DIR: artifacts
-  TRAINED_MODEL_DIR: model
+  TRAINED_MODEL_DIR: trained_model
   MODEL_DIR: model
   MODEL_NAME: model.h5
   CHECKPOINT_DIR: checkpoints

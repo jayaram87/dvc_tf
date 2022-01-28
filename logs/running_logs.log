@@ -145,3 +145,13 @@ _________________________________________________________________
 [2022-01-29 00:05:09,879: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
 [2022-01-29 00:05:09,879: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
 
+[2022-01-29 00:35:20,862: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-29 00:35:20,862: INFO: stage_03_prepare_callback]: >>>>> stage three started <<<<<
+[2022-01-29 00:35:20,863: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 00:35:20,864: INFO: common]: Directory is created at artifacts\tensorboard_log_dir
+[2022-01-29 00:35:20,864: INFO: common]: Directory is created at artifacts\checkpoints
+[2022-01-29 00:35:20,864: INFO: common]: Directory is created at artifacts\callbacks
+[2022-01-29 00:35:20,865: INFO: callbacks]: tensorboard callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
+[2022-01-29 00:35:20,867: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
+[2022-01-29 00:35:20,867: INFO: stage_03_prepare_callback]: >>>>> stage three completed! callbacks are prepared and saved as binary <<<<<n
