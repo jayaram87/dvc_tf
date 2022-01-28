@@ -227,3 +227,13 @@ Traceback (most recent call last):
   File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_base.py", line 72, in _average_binary_score
     raise ValueError("{0} format is not supported".format(y_type))
 ValueError: multiclass format is not supported
+[2022-01-29 03:15:06,077: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:15:06,079: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:15:06,632: ERROR: stage_05_evaluate]: 'Sequential' object has no attribute 'predict_classes'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 76, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 28, in evaluate
+    predictions = model.predict_classes(x_test)
+AttributeError: 'Sequential' object has no attribute 'predict_classes'
