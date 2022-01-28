@@ -26,7 +26,7 @@ def evaluate(config_path):
     y_test = np.load(os.path.join(artifacts['DATA_DIR'], 'y_test.npy'))
 
     prediction_by_class = model.predict(x_test)
-    predictions = np.argmax(prediction_by_class)[0]
+    predictions = np.argmax(prediction_by_class)
 
     PRC_json_path = config["plots"]["PRC"]
     ROC_json_path = config["plots"]["ROC"]

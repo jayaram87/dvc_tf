@@ -203,3 +203,13 @@ Traceback (most recent call last):
   File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 29, in evaluate
     predictions = np.argmax(prediction_by_class)[0]
 IndexError: invalid index to scalar variable.
+[2022-01-29 03:12:00,831: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:12:00,834: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:12:01,908: ERROR: stage_05_evaluate]: invalid index to scalar variable.
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 29, in evaluate
+    predictions = np.argmax(prediction_by_class)[0]
+IndexError: invalid index to scalar variable.
