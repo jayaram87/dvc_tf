@@ -251,3 +251,94 @@ Traceback (most recent call last):
   File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_base.py", line 72, in _average_binary_score
     raise ValueError("{0} format is not supported".format(y_type))
 ValueError: multiclass format is not supported
+[2022-01-29 03:21:02,431: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-29 03:21:02,432: INFO: stage_03_prepare_callback]: >>>>> stage three started <<<<<
+[2022-01-29 03:21:02,434: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:21:02,434: INFO: common]: Directory is created at artifacts\tensorboard_log_dir
+[2022-01-29 03:21:02,434: INFO: common]: Directory is created at artifacts\checkpoints
+[2022-01-29 03:21:02,434: INFO: common]: Directory is created at artifacts\callbacks
+[2022-01-29 03:21:02,435: INFO: callbacks]: tensorboard callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
+[2022-01-29 03:21:02,437: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
+[2022-01-29 03:21:02,437: INFO: stage_03_prepare_callback]: >>>>> stage three completed! callbacks are prepared and saved as binary <<<<<n
+[2022-01-29 03:21:05,767: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 03:21:05,767: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 03:21:05,769: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:21:05,769: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 03:21:05,769: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 03:21:06,330: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 03:21:06,330: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 03:21:06,342: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 03:21:06,343: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+
+[2022-01-29 03:21:09,502: INFO: stage_01_get_data]: 
+********************
+[2022-01-29 03:21:09,502: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-29 03:21:09,710: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-29 03:21:10,071: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-29 03:21:10,075: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+
+[2022-01-29 03:21:14,109: INFO: stage_04_train]: 
+********************
+[2022-01-29 03:21:14,109: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-29 03:21:14,111: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:21:14,111: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 03:21:14,112: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 03:21:14,638: INFO: model]: untrained models is read from: artifacts\model\model.h5
+[2022-01-29 03:21:14,639: INFO: model]: untrained full model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 03:21:14,640: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-29 03:21:14,766: INFO: data_management]: train and valid data created is created.
+[2022-01-29 03:26:37,210: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 03:26:37,221: INFO: stage_04_train]: trained models is saved at: 
+artifacts\trained_model\trained_model.h5
+[2022-01-29 03:26:37,247: INFO: stage_04_train]: >>>>> stage four completed! training completed <<<<<n
+[2022-01-29 03:26:41,937: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:26:41,939: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:26:42,966: ERROR: stage_05_evaluate]: multiclass format is not supported
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 50, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 33, in evaluate
+    avg_prec = metrics.average_precision_score(y_test, predictions)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_ranking.py", line 232, in average_precision_score
+    return _average_binary_score(
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_base.py", line 72, in _average_binary_score
+    raise ValueError("{0} format is not supported".format(y_type))
+ValueError: multiclass format is not supported

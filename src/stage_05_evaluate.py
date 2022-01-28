@@ -30,12 +30,12 @@ def evaluate(config_path):
 
     scores_json_path = config["metrics"]["SCORES"]
 
-    avg_prec = metrics.average_precision_score(y_test, predictions)
-    roc_auc = metrics.roc_auc_score(y_test, predictions)
+    f1_score = metrics.f1_score(y_test, predictions)
+    accuracy = metrics.accuracy_score(y_test, predictions)
 
     scores = {
-        "avg_prec": avg_prec,
-        "roc_auc": roc_auc
+        "f1_score": f1_score,
+        "accuracy": accuracy
     }
 
     save_json(scores_json_path, scores)

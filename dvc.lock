@@ -4,8 +4,8 @@ stages:
     cmd: python src/stage_01_get_data.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 81297dddf72a2c8d995225f941a5baa9
-      size: 382
+      md5: e740d6c232652e743d4587f7a6124814
+      size: 338
     - path: src/stage_01_get_data.py
       md5: 1058ee1461051087e0bfbc66394703e0
       size: 1557
@@ -26,8 +26,8 @@ stages:
     cmd: python src/stage_02_prepare_base_model.py --config=configs/config.yaml --params=params.yaml
     deps:
     - path: configs/config.yaml
-      md5: 81297dddf72a2c8d995225f941a5baa9
-      size: 382
+      md5: e740d6c232652e743d4587f7a6124814
+      size: 338
     - path: src/stage_02_prepare_base_model.py
       md5: 38947e29af7416c8901136ed344d304c
       size: 1678
@@ -42,14 +42,14 @@ stages:
         LEARNING_RATE: 0.001
     outs:
     - path: artifacts/model/model.h5
-      md5: 282d065dcf047a8b1a03fa16462fe377
+      md5: 95043e5947deb88405d0e3b1104943e4
       size: 1084000
   prepare_callback:
     cmd: python src/stage_03_prepare_callback.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 81297dddf72a2c8d995225f941a5baa9
-      size: 382
+      md5: e740d6c232652e743d4587f7a6124814
+      size: 338
     - path: params.yaml
       md5: c33aedf611dfe1328c1a33896339f386
       size: 64
@@ -67,7 +67,7 @@ stages:
       md5: d84f295f3402d4577005ca198f601456
       size: 723
     - path: artifacts/callbacks/tensorboard_cb.cb
-      md5: 6e71e7ddea8870978a810b78baecee97
+      md5: 5939ca03e8ea456e9d7ef067fc32ba55
       size: 572
   train:
     cmd: python src/stage_04_train.py --config=configs/config.yaml --params=params.yaml
@@ -76,14 +76,14 @@ stages:
       md5: d84f295f3402d4577005ca198f601456
       size: 723
     - path: artifacts/callbacks/tensorboard_cb.cb
-      md5: 6e71e7ddea8870978a810b78baecee97
+      md5: 5939ca03e8ea456e9d7ef067fc32ba55
       size: 572
     - path: artifacts/model/model.h5
-      md5: 282d065dcf047a8b1a03fa16462fe377
+      md5: 95043e5947deb88405d0e3b1104943e4
       size: 1084000
     - path: configs/config.yaml
-      md5: 81297dddf72a2c8d995225f941a5baa9
-      size: 382
+      md5: e740d6c232652e743d4587f7a6124814
+      size: 338
     - path: data/X_train_full.npy
       md5: 6e5236d1fa7110b7d4c75d3822137908
       size: 47040128
@@ -111,14 +111,14 @@ stages:
         EPOCHS: 50
     outs:
     - path: artifacts/checkpoints
-      md5: c28e43b494b28a505be73af47045dcda.dir
+      md5: 2e00673af9cd7775cb932a22db3be9b3.dir
       size: 1086400
       nfiles: 1
     - path: artifacts/tensorboard_log_dir
-      md5: 529c993de8ddf17168d89f0da891c693.dir
+      md5: 24087f91c3e58dda0d05b7883680fa40.dir
       size: 53683
       nfiles: 2
     - path: artifacts/trained_model
-      md5: de72e4f1fb3b352d1542780aa29e747b.dir
+      md5: 5ffad6051502810f13b872d760a099fd.dir
       size: 1086400
       nfiles: 1

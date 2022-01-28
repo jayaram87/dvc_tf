@@ -1,3 +1,5 @@
 logs/
 data/
 .dvc/
+artifacts/
+src.egg-info/
