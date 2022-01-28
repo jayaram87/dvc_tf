@@ -1,6 +1,6 @@
 stages:
   get_data:
-    cmd: python src/stage_01_get_data.py --config=configs/configs.yaml
+    cmd: python src/stage_01_get_data.py --config=configs/config.yaml
     deps:
     - src/stage_01_get_data.py
     - configs/config.yaml
