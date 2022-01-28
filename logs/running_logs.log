@@ -1,0 +1,35 @@
+[2022-01-29 00:00:33,302: INFO: stage_01_get_data]: 
+********************
+[2022-01-29 00:00:33,303: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-29 00:00:33,527: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-29 00:00:33,999: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-29 00:00:34,004: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+
+[2022-01-29 00:00:37,804: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 00:00:37,805: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 00:00:37,806: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 00:00:37,807: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 00:00:37,807: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 00:00:38,392: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 00:00:38,392: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 00:00:38,493: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 00:00:38,493: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+

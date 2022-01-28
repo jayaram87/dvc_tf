@@ -20,4 +20,4 @@ stages:
     params:
     - LEARNING_RATE
     outs:
-    - artifacts/base_model/model.h5
+    - artifacts/model/model.h5
