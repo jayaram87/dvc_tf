@@ -68,12 +68,3 @@ stages:
     metrics:
     - scores.json:
         cache: false
-    plots:
-    - prc.json:
-        cache: false
-        x: recall
-        y: precision
-    - roc.json:
-        cache: false
-        x: fpr
-        y: tpr

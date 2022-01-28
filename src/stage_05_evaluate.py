@@ -28,9 +28,6 @@ def evaluate(config_path):
     predictions = model.predict(x_test)
     predictions = np.argmax(predictions, axis=1)
 
-    PRC_json_path = config["plots"]["PRC"]
-    ROC_json_path = config["plots"]["ROC"]
-
     scores_json_path = config["metrics"]["SCORES"]
 
     avg_prec = metrics.average_precision_score(y_test, predictions)
@@ -42,30 +39,6 @@ def evaluate(config_path):
     }
 
     save_json(scores_json_path, scores)
-
-    precision, recall, prc_threshold = metrics.precision_recall_curve(y_test, predictions)
-    nth_points = math.ceil(len(prc_threshold) / 1000)
-    prc_points = list(zip(precision, recall, prc_threshold))[::nth_points]
-
-    prc_data = {
-        "prc": [
-            {"precision": p, "recall": r, "threshold": t}
-            for p, r, t in prc_points
-        ]
-    }
-
-    save_json(PRC_json_path, prc_data)
-
-    fpr, tpr, roc_threshold = metrics.roc_curve(y_test, predictions)
-
-    roc_data = {
-        "roc": [
-            {"fpr": fp, "tpr": tp, "threshold": t}
-            for fp, tp, t in zip(fpr, tpr, roc_threshold)
-        ]
-    }
-
-    save_json(ROC_json_path, roc_data)
 
 
 if __name__ == '__main__':
