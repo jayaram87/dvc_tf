@@ -43,3 +43,10 @@ AttributeError: 'numpy.ndarray' object has no attribute 'element_spec'
 [2022-01-28 21:21:07,183: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
 [2022-01-28 21:21:07,187: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
 
+[2022-01-28 22:11:42,814: INFO: stage_01_get_data]: 
+********************
+[2022-01-28 22:11:42,814: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2022-01-28 22:11:43,032: INFO: stage_01_get_data]: Directory is created at data
+[2022-01-28 22:11:43,316: INFO: stage_01_get_data]: Mnist data stored in data folder as arrays
+[2022-01-28 22:11:43,321: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<
+
