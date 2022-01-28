@@ -183,3 +183,23 @@ Traceback (most recent call last):
   File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 25, in evaluate
     x_test = np.load(os.path.join(artifacts['data'], 'X_test.npy')) / 255
 KeyError: 'data'
+[2022-01-29 03:10:52,054: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:10:52,057: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:10:52,610: ERROR: stage_05_evaluate]: 'Sequential' object has no attribute 'predict_proba'
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 28, in evaluate
+    prediction_by_class = model.predict_proba(x_test)
+AttributeError: 'Sequential' object has no attribute 'predict_proba'
+[2022-01-29 03:11:45,176: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:11:45,178: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:11:46,239: ERROR: stage_05_evaluate]: invalid index to scalar variable.
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 29, in evaluate
+    predictions = np.argmax(prediction_by_class)[0]
+IndexError: invalid index to scalar variable.
