@@ -61,3 +61,31 @@ _________________________________________________________________
 [2022-01-29 00:01:28,769: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
 [2022-01-29 00:01:28,770: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
 
+[2022-01-29 00:02:47,025: INFO: stage_02_prepare_base_model]: 
+********************
+[2022-01-29 00:02:47,025: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2022-01-29 00:02:47,026: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 00:02:47,027: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 00:02:47,027: INFO: common]: Directory is created at artifacts\model
+[2022-01-29 00:02:47,597: INFO: model]: custom model is compiled and ready to be trained
+[2022-01-29 00:02:47,597: INFO: model]: full model summary Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 00:02:47,610: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\model\model.h5
+[2022-01-29 00:02:47,611: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+
