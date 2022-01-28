@@ -342,3 +342,21 @@ Traceback (most recent call last):
   File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_base.py", line 72, in _average_binary_score
     raise ValueError("{0} format is not supported".format(y_type))
 ValueError: multiclass format is not supported
+[2022-01-29 03:27:45,577: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:27:45,579: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:27:46,973: ERROR: stage_05_evaluate]: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 50, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 33, in evaluate
+    f1_score = metrics.f1_score(y_test, predictions)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_classification.py", line 1123, in f1_score
+    return fbeta_score(
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_classification.py", line 1261, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_classification.py", line 1544, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_classification.py", line 1365, in _check_set_wise_labels
+    raise ValueError(
+ValueError: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].

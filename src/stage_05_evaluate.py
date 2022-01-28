@@ -30,7 +30,7 @@ def evaluate(config_path):
 
     scores_json_path = config["metrics"]["SCORES"]
 
-    f1_score = metrics.f1_score(y_test, predictions)
+    f1_score = metrics.f1_score(y_test, predictions, average='weighted')
     accuracy = metrics.accuracy_score(y_test, predictions)
 
     scores = {
