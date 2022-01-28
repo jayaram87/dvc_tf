@@ -9,3 +9,15 @@ stages:
     - data/X_test.npy
     - data/y_train_full.npy
     - data/y_test.npy
+
+  prepare_base_model:
+    cmd: python src/stage_02_prepare_base_model.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - src/stage_02_prepare_base_model.py
+    - src/utils/common.py
+    - src/utils/model.py
+    - configs/config.yaml
+    params:
+    - LEARNING_RATE
+    outs:
+    - artifacts/base_model/model.h5
