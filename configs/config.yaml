@@ -12,3 +12,10 @@ artifacts:
 
 local_data_dirs:
   - data
+
+plots:
+  PRC: prc.json
+  ROC: roc.json
+
+metrics:
+  SCORES: scores.json

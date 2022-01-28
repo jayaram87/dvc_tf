@@ -55,3 +55,25 @@ stages:
     - artifacts/trained_model
     - artifacts/tensorboard_log_dir
     - artifacts/checkpoints
+
+  evaluate:
+    cmd: python src/stage_05_evaluate.py --config=configs/config.yaml
+    deps:
+    - src/stage_05_evaluate.py
+    - src/utils/common.py
+    - configs/config.yaml
+    - artifacts/features/trained_model.h5
+    - data/X_test.npy
+    - data/y_test.npy
+    metrics:
+    - scores.json:
+        cache: false
+    plots:
+    - prc.json:
+        cache: false
+        x: recall
+        y: precision
+    - roc.json:
+        cache: false
+        x: fpr
+        y: tpr

@@ -3,4 +3,5 @@ tqdm
 tensorflow
 joblib
 scipy
+scikit-learn
 -e .

@@ -1,0 +1,42 @@
+[2022-01-29 01:29:50,336: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-29 01:29:50,337: INFO: stage_03_prepare_callback]: >>>>> stage three started <<<<<
+[2022-01-29 01:29:50,340: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 01:29:50,341: INFO: common]: Directory is created at artifacts\tensorboard_log_dir
+[2022-01-29 01:29:50,341: INFO: common]: Directory is created at artifacts\checkpoints
+[2022-01-29 01:29:50,342: INFO: common]: Directory is created at artifacts\callbacks
+[2022-01-29 01:29:50,343: INFO: callbacks]: tensorboard callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
+[2022-01-29 01:29:50,346: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
+[2022-01-29 01:29:50,346: INFO: stage_03_prepare_callback]: >>>>> stage three completed! callbacks are prepared and saved as binary <<<<<n
+[2022-01-29 01:29:58,226: INFO: stage_04_train]: 
+********************
+[2022-01-29 01:29:58,227: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-29 01:29:58,235: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 01:29:58,238: INFO: common]: content from params.yaml read successfully!!
+[2022-01-29 01:29:58,239: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 01:29:58,938: INFO: model]: untrained models is read from: artifacts\model\model.h5
+[2022-01-29 01:29:58,940: INFO: model]: untrained full model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-01-29 01:29:58,945: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-29 01:29:59,317: INFO: data_management]: train and valid data created is created.
+[2022-01-29 01:37:16,431: INFO: common]: Directory is created at artifacts\trained_model
+[2022-01-29 01:37:16,440: INFO: stage_04_train]: trained models is saved at: 
+artifacts\trained_model\model_at_Sat_Jan_29_01.37.16_2022_.h5
+[2022-01-29 01:37:16,467: INFO: stage_04_train]: >>>>> stage four completed! training completed <<<<<n

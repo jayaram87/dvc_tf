@@ -57,8 +57,8 @@ stages:
       md5: aa04144d120d648db82ee6a57d056b22
       size: 1611
     - path: src/utils/callbacks.py
-      md5: c2818209755ffd29edf3b442bc9eb8dc
-      size: 1626
+      md5: f334646ad21433effa0bc0b7f12556ce
+      size: 1628
     - path: src/utils/common.py
       md5: 8460252e8218203035d7b9fddf2c7169
       size: 1307
@@ -67,5 +67,58 @@ stages:
       md5: d84f295f3402d4577005ca198f601456
       size: 723
     - path: artifacts/callbacks/tensorboard_cb.cb
-      md5: e5faba771d1fbbac53bb97c91e571869
+      md5: e1eff31f2622a45863939134db567417
       size: 572
+  train:
+    cmd: python src/stage_04_train.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - path: artifacts/callbacks/checkpoint_cb.cb
+      md5: d84f295f3402d4577005ca198f601456
+      size: 723
+    - path: artifacts/callbacks/tensorboard_cb.cb
+      md5: e1eff31f2622a45863939134db567417
+      size: 572
+    - path: artifacts/model/model.h5
+      md5: 192d6ee33d6ad0ce5f121a9f482b79f7
+      size: 1084000
+    - path: configs/config.yaml
+      md5: 345bb59de077ce467c9c9c6443513593
+      size: 303
+    - path: data/X_train_full.npy
+      md5: 6e5236d1fa7110b7d4c75d3822137908
+      size: 47040128
+    - path: data/y_train_full.npy
+      md5: 40b22dba779a1dffd8089edc7991f797
+      size: 60128
+    - path: src/stage_04_train.py
+      md5: 90ef51ab6a9110590db672b7a909d374
+      size: 2415
+    - path: src/utils/callbacks.py
+      md5: f334646ad21433effa0bc0b7f12556ce
+      size: 1628
+    - path: src/utils/common.py
+      md5: 8460252e8218203035d7b9fddf2c7169
+      size: 1307
+    - path: src/utils/data_management.py
+      md5: 57341595ccbd458e90e119c08486b3ae
+      size: 554
+    - path: src/utils/model.py
+      md5: 77e30aee7dc6d249b16d2704a178eb49
+      size: 1755
+    params:
+      params.yaml:
+        BATCH_SIZE: 16
+        EPOCHS: 50
+    outs:
+    - path: artifacts/checkpoints
+      md5: b36accd26db8ea75effe84daac6c9db7.dir
+      size: 1086400
+      nfiles: 1
+    - path: artifacts/tensorboard_log_dir
+      md5: 104ebb4da11f94eda3467fc6308b21b6.dir
+      size: 53683
+      nfiles: 2
+    - path: artifacts/trained_model
+      md5: e366918be85a5b634022b26b25a704f4.dir
+      size: 1086400
+      nfiles: 1

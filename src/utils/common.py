@@ -4,6 +4,7 @@ import logging
 import shutil
 from tqdm import tqdm
 import time
+import json
 
 
 def read_yaml_file(path_to_yaml_file: str) -> dict:
@@ -42,3 +43,10 @@ def get_timestamp(name: str) -> str:
     timestamp = time.asctime().replace(" ", "_").replace(":", ".")
     unique_name = f"{name}_at_{timestamp}"
     return unique_name
+
+
+def save_json(path: str, data: dict) -> None:
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+
+    logging.info(f"json file saved at: {path}")

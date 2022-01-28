@@ -41,7 +41,7 @@ def load_full_model(untrained_full_model_path: str) -> tf.keras.models.Model:
 
 def get_unique_path_to_save_model(trained_model_dir: str, model_name: str = "model") -> str:
     timestamp = get_timestamp(name=model_name)
-    unique_model_name = f"{timestamp}_.h5"
+    unique_model_name = f"trained_{model_name}.h5"
     unique_model_path = os.path.join(trained_model_dir, unique_model_name)
 
     return unique_model_path

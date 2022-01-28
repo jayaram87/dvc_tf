@@ -1,6 +1,10 @@
 setup.py
 src/__init__.py
 src/stage_01_get_data.py
+src/stage_02_prepare_base_model.py
+src/stage_03_prepare_callback.py
+src/stage_04_train.py
+src/stage_05_evaluate.py
 src.egg-info/PKG-INFO
 src.egg-info/SOURCES.txt
 src.egg-info/dependency_links.txt
