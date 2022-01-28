@@ -19,10 +19,7 @@ def evaluate(config_path):
     artifacts = config["artifacts"]
 
     model_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["TRAINED_MODEL_DIR"])
-
-    model_name = get_timestamp(name='model')
-    model_name = f"{model_name}_.h5"
-    model_path = os.path.join(model_dir_path, model_name)
+    model_path = os.path.join(model_dir_path, 'trained_model.h5')
 
     model = joblib.load(model_path)
     x_test = np.load(os.path.join(artifacts['data'], 'X_test.npy')) / 255
