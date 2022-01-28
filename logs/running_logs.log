@@ -213,3 +213,17 @@ Traceback (most recent call last):
   File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 29, in evaluate
     predictions = np.argmax(prediction_by_class)[0]
 IndexError: invalid index to scalar variable.
+[2022-01-29 03:13:30,590: INFO: stage_05_evaluate]: 
+********************
+[2022-01-29 03:13:30,592: INFO: common]: content from configs/config.yaml read successfully!!
+[2022-01-29 03:13:31,803: ERROR: stage_05_evaluate]: multiclass format is not supported
+Traceback (most recent call last):
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 77, in <module>
+    evaluate(config_path=parsed_args.config)
+  File "D:\ineuron\Live_classes\dl\dvc_tf\src\stage_05_evaluate.py", line 36, in evaluate
+    avg_prec = metrics.average_precision_score(y_test, predictions)
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_ranking.py", line 232, in average_precision_score
+    return _average_binary_score(
+  File "D:\Anaconda3\envs\dvc_tf1\lib\site-packages\sklearn\metrics\_base.py", line 72, in _average_binary_score
+    raise ValueError("{0} format is not supported".format(y_type))
+ValueError: multiclass format is not supported
