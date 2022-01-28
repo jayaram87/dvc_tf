@@ -4,8 +4,8 @@ stages:
     cmd: python src/stage_01_get_data.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 2708073f10ab315102db6568ba7082c7
-      size: 295
+      md5: 345bb59de077ce467c9c9c6443513593
+      size: 303
     - path: src/stage_01_get_data.py
       md5: 1058ee1461051087e0bfbc66394703e0
       size: 1557
@@ -26,8 +26,8 @@ stages:
     cmd: python src/stage_02_prepare_base_model.py --config=configs/config.yaml --params=params.yaml
     deps:
     - path: configs/config.yaml
-      md5: 2708073f10ab315102db6568ba7082c7
-      size: 295
+      md5: 345bb59de077ce467c9c9c6443513593
+      size: 303
     - path: src/stage_02_prepare_base_model.py
       md5: 38947e29af7416c8901136ed344d304c
       size: 1678
@@ -35,21 +35,21 @@ stages:
       md5: 8460252e8218203035d7b9fddf2c7169
       size: 1307
     - path: src/utils/model.py
-      md5: 98b50337d9fbeeb4c2f07318a8a80fef
-      size: 1792
+      md5: 77e30aee7dc6d249b16d2704a178eb49
+      size: 1755
     params:
       params.yaml:
         LEARNING_RATE: 0.001
     outs:
     - path: artifacts/model/model.h5
-      md5: 4e56aae7b3ca495ad9ead5f7ce538729
+      md5: 192d6ee33d6ad0ce5f121a9f482b79f7
       size: 1084000
   prepare_callback:
     cmd: python src/stage_03_prepare_callback.py --config=configs/config.yaml
     deps:
     - path: configs/config.yaml
-      md5: 2708073f10ab315102db6568ba7082c7
-      size: 295
+      md5: 345bb59de077ce467c9c9c6443513593
+      size: 303
     - path: params.yaml
       md5: c33aedf611dfe1328c1a33896339f386
       size: 64
@@ -57,8 +57,8 @@ stages:
       md5: aa04144d120d648db82ee6a57d056b22
       size: 1611
     - path: src/utils/callbacks.py
-      md5: 4187b8cb560900aa945ff9fce772066c
-      size: 1534
+      md5: c2818209755ffd29edf3b442bc9eb8dc
+      size: 1626
     - path: src/utils/common.py
       md5: 8460252e8218203035d7b9fddf2c7169
       size: 1307
@@ -67,5 +67,5 @@ stages:
       md5: d84f295f3402d4577005ca198f601456
       size: 723
     - path: artifacts/callbacks/tensorboard_cb.cb
-      md5: 403a7295f820d5b4372cade17fcf3598
+      md5: e5faba771d1fbbac53bb97c91e571869
       size: 572

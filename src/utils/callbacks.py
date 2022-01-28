@@ -31,7 +31,7 @@ def get_callbacks(callback_dir_path: str) -> list:
 
     callbacks = [joblib.load(path) for path in callback_paths]
 
-    callbacks += tf.keras.callbacks.EarlyStopping(patience=5, restore_best_weights=True)
+    callbacks += [tf.keras.callbacks.EarlyStopping(patience=5, restore_best_weights=True)]
 
     logging.info(f"saved callbacks are loaded and now ready to be used")
 
