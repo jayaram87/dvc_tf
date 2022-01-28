@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: b637558e2575ad86eadb6c6d0013d79e
+      size: 370
+    - path: src/stage_01_get_data.py
+      md5: 1058ee1461051087e0bfbc66394703e0
+      size: 1557
+    outs:
+    - path: data/X_test.npy
+      md5: 7942b66f2197f22a8ed486c6bc205255
+      size: 7840128
+    - path: data/X_train_full.npy
+      md5: 6e5236d1fa7110b7d4c75d3822137908
+      size: 47040128
+    - path: data/y_test.npy
+      md5: 3deb6f9de60479b947785b62051694b8
+      size: 10128
+    - path: data/y_train_full.npy
+      md5: 40b22dba779a1dffd8089edc7991f797
+      size: 60128

@@ -36,3 +36,9 @@ def copy_files(source_data_dir: str, local_data_dir: str) -> None:
     logging.info(
         f"all the files has been copied from {source_data_dir} to {local_data_dir}"
     )
+
+
+def get_timestamp(name: str) -> str:
+    timestamp = time.asctime().replace(" ", "_").replace(":", ".")
+    unique_name = f"{name}_at_{timestamp}"
+    return unique_name
